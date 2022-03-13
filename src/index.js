@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { OptionsSelectedProvider } from './Context/OptionSelectedContext';
+import { ColorProvider } from './Context/ColorsContext';
+import { MyPaletteProvider } from './Context/MyPaletteContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MyPaletteProvider>
+    <ColorProvider>
+    <OptionsSelectedProvider>
+      <App />
+    </OptionsSelectedProvider>
+    </ColorProvider>
+    </MyPaletteProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

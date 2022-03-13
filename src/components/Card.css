@@ -1,0 +1,48 @@
+.card{
+    width: 100%;
+    height: 310px;
+    padding: 15px 15px 0 15px;
+    background-color: white;
+    transition: .2s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-color{
+    width: 100%;
+    height: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card, .card-color{
+    border-radius: 3px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.color-code{
+    font-weight: bold;
+}
+
+.card, .heart-icon-container, .color-code{
+    cursor: pointer;
+}
+
+
+        @media screen and (max-width: 616px){
+            .card{
+                height: 160px;
+            }
+
+            .card-color{
+                height: 100px;
+            }
+        }

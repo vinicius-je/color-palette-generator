@@ -1,0 +1,35 @@
+.range-container{
+    width: 260px;
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range{
+    width: 230px;
+    height: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: #E8EBF3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(156, 156, 156, 2);
+    outline: none;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #5E4D8C;
+    cursor: pointer;
+    border: 3px solid #131313;
+    box-shadow: -407px 0 0 400px #5E4D8C;
+  }
+
+.range-container h3{
+    width: 20px;
+    text-align: center;
+}
