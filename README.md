@@ -5,7 +5,7 @@ Desenvolver um gerador de paleta de cores customizável.
 
 ### Funcinalidades
 * Definir quantidade de cores.
-* Escolhar estilo das coras: Default, Dark and Light.
+* Escolhar estilo das cores: Default, Dark and Light.
 * Salvar cores preferidas.
 * Copiar código hexadecimal das cores.
 
