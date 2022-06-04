@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ColorContext } from '../Context/ColorsContext';
 import { MyPaletteContext } from '../Context/MyPaletteContext';
 import './Card.css'
 
@@ -8,7 +7,7 @@ const Card = (props) => {
     const [message, setMessage] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
     const [selected, setSelected] = useState(false);
-    const [colors] = useContext(ColorContext);
+    const colors = props.value
     const [myPalette, setMyPalette] = useContext(MyPaletteContext);
 
     const style = {

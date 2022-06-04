@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
-import { ColorContext } from '../Context/ColorsContext';
+import React from 'react';
 import Card from './Card';
 import './CardContainer.css';
 
-const CardContainer = () => {
-    const [colors] = useContext(ColorContext);
+const CardContainer = (props) => {
+    const colors = props.value;
     return(
         <div className='card-container'>
-            {colors.map((item, index) => <Card item={item} key={index}/>)}
+            {colors.map((item, index) => <Card value={props.value} item={item} key={index}/>)}
         </div>
     )
 }

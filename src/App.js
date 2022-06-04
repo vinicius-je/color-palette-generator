@@ -4,13 +4,12 @@ import CardContainer from './components/CardContainer';
 import Navbar from './components/Navbar';
 import Range from './components/Range';
 import Button from './components/Button';
-import { ColorContext } from './Context/ColorsContext';
 import { OptionSelectedContext } from './Context/OptionSelectedContext';
 import { MyPaletteContext } from './Context/MyPaletteContext';
 
 function App() {
 
-  const [_, setColors] = useContext(ColorContext);
+  const [colors, setColors] = useState([]);
   const [myPalette] = useContext(MyPaletteContext);
   const [optionSelected] = useContext(OptionSelectedContext);
   const [amount, setAmount] = useState(3);
@@ -57,7 +56,7 @@ function App() {
     <div className='App'>
       <h3 className='app-title'>Color palette generator</h3>
       <Navbar/>
-      <CardContainer/>
+      <CardContainer value={colors}/>
       {optionSelected !== 'My palette' ? 
       <>
         <Range min='3' max='12' step='1' amount={amount} setAmount={setAmount}/>
