@@ -6,7 +6,11 @@ const CardContainer = (props) => {
     const colors = props.value;
     return(
         <div className='card-container'>
-            {colors.map((item, index) => <Card value={props.value} item={item} key={index}/>)}
+            {colors.map((item, index) => <Card 
+                colorPalette={props.colorPalette} 
+                value={props.value}
+                item={item}
+                key={index}/>)}
         </div>
     )
 }

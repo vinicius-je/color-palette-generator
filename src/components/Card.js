@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { MyPaletteContext } from '../Context/MyPaletteContext';
+import React, { useEffect, useState } from 'react';
 import './Card.css'
 
-const Card = (props) => {
-    const {color, my_palette} = props.item;
+const Card = ({value, colorPalette, item}) => {
+    const {color, my_palette} = item;
     const [message, setMessage] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
     const [selected, setSelected] = useState(false);
-    const colors = props.value
-    const [myPalette, setMyPalette] = useContext(MyPaletteContext);
+    const [myPalette, setMyPalette] = colorPalette;
+    const colors = value;
 
     const style = {
         backgroundColor: color

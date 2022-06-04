@@ -1,15 +1,14 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import CardContainer from './components/CardContainer';
 import Navbar from './components/Navbar';
 import Range from './components/Range';
 import Button from './components/Button';
-import { MyPaletteContext } from './Context/MyPaletteContext';
 
 function App() {
 
   const [colors, setColors] = useState([]);
-  const [myPalette] = useContext(MyPaletteContext);
+  const [myPalette, setMyPalette] = useState([]);
   const [optionSelected, setOptionSelected] = useState('Default');
   const [amount, setAmount] = useState(3);
 
@@ -50,11 +49,18 @@ function App() {
     }
   }, [optionSelected])
 
+  useEffect(() => {
+    let palette = JSON.parse(localStorage.getItem('myPalette'));
+    if(palette !== null){
+        setMyPalette(palette);
+    }
+  }, [])
+
   return (
     <div className='App'>
       <h3 className='app-title'>Color palette generator</h3>
       <Navbar value={[optionSelected, setOptionSelected]}/>
-      <CardContainer value={colors}/>
+      <CardContainer value={colors} colorPalette={[myPalette, setMyPalette]}/>
       {optionSelected !== 'My palette' ? 
       <>
         <Range min='3' max='12' step='1' amount={amount} setAmount={setAmount}/>

@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { MyPaletteProvider } from './Context/MyPaletteContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyPaletteProvider>
-      <App />
-    </MyPaletteProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
