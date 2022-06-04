@@ -3,7 +3,7 @@
 ### Objetivo do projeto:
 Desenvolver um gerador de paleta de cores customizável.
 
-### Funcinalidades
+### Funcionalidades
 * Definir quantidade de cores.
 * Escolhar estilo das cores: Default, Dark and Light.
 * Salvar cores preferidas.
