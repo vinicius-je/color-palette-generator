@@ -1,9 +1,8 @@
-import React, { useContext, useEffect } from 'react';
-import { OptionSelectedContext } from '../Context/OptionSelectedContext';
+import React, { useContext } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
-    const [optionSelected, setOptionSelected] = useContext(OptionSelectedContext);
+const Navbar = (props) => {
+    const [optionSelected, setOptionSelected] = props.value;
     
     const onClick = (e) => {
         setOptionSelected(e.target.innerText);

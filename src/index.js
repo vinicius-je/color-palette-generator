@@ -3,15 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { OptionsSelectedProvider } from './Context/OptionSelectedContext';
 import { MyPaletteProvider } from './Context/MyPaletteContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <MyPaletteProvider>
-    <OptionsSelectedProvider>
       <App />
-    </OptionsSelectedProvider>
     </MyPaletteProvider>
   </React.StrictMode>,
   document.getElementById('root')

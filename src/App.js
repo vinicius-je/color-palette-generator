@@ -4,14 +4,13 @@ import CardContainer from './components/CardContainer';
 import Navbar from './components/Navbar';
 import Range from './components/Range';
 import Button from './components/Button';
-import { OptionSelectedContext } from './Context/OptionSelectedContext';
 import { MyPaletteContext } from './Context/MyPaletteContext';
 
 function App() {
 
   const [colors, setColors] = useState([]);
   const [myPalette] = useContext(MyPaletteContext);
-  const [optionSelected] = useContext(OptionSelectedContext);
+  const [optionSelected, setOptionSelected] = useState('Default');
   const [amount, setAmount] = useState(3);
 
   const characters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
@@ -39,7 +38,6 @@ function App() {
     setColors(listOfColors);
   }
 
-
   useEffect(() => {
     if(optionSelected === 'My palette'){
       setColors(myPalette);
@@ -55,7 +53,7 @@ function App() {
   return (
     <div className='App'>
       <h3 className='app-title'>Color palette generator</h3>
-      <Navbar/>
+      <Navbar value={[optionSelected, setOptionSelected]}/>
       <CardContainer value={colors}/>
       {optionSelected !== 'My palette' ? 
       <>
