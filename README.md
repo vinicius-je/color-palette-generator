@@ -1,6 +1,6 @@
 <h1 align="center">Color Palette Generator</h1>
 
-### Objetivo do projeto:
+### Objetivo do projeto
 Desenvolver um gerador de paleta de cores customizável.
 
 ### Funcionalidades
